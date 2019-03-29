@@ -26,7 +26,7 @@ pipelineConfig:
       setup:
         replace: true
         steps:
-        - groovy: git 'https://REPLACE_ME_GIT_PROVIDER/REPLACE_ME_ORG/REPLACE_ME_APP_NAME.git'
+        - groovy: git 'https://github.com/tdcox/tensorflow1.git'
           when: "prow"
         - sh: git checkout master
           comment: ensure we're not on a detached head
@@ -52,7 +52,7 @@ pipelineConfig:
       promote:
         replace: true
         steps:
-        - dir: ./charts/REPLACE_ME_APP_NAME
+        - dir: ./charts/tensorflow1
           steps:
           - sh: jx step changelog --version v\$(cat ../../VERSION)
           - comment: release the helm chart
