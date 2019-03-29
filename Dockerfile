@@ -1,4 +1,4 @@
-FROM python:onbuild
+FROM tensorflow/tensorflow:latest-py3
 COPY requirements.txt .
 ENV PORT 8080
 EXPOSE 8080
