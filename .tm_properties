@@ -1,0 +1,7 @@
+#TM_PYTHON = "/Users/terry/.virtualenvs/test115/bin/python"
+excludeDirectoriesInBrowser = "{__pycache__,include,lib,bin}"
+includeFilesInBrowser = "{.gitignore}"
+
+[ source.python ]
+softTabs = true
+tabSize  = 4
