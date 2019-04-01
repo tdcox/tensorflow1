@@ -106,3 +106,5 @@ pyvenv.cfg
 
 # Textmate
 .tm_properties
+
+log/
