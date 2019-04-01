@@ -282,7 +282,7 @@ def word2vec_basic(log_dir):
                         close_word = reverse_dictionary[nearest[k]]
                         log_str = '%s %s,' % (log_str, close_word)
                     print(log_str)
-        final_embeddings = normalized_embeddings.eval()
+#        final_embeddings = normalized_embeddings.eval()
 
         # Write corresponding labels for the embeddings.
         with open(log_dir + '/metadata.tsv', 'w') as f:
@@ -308,7 +308,7 @@ def word2vec_basic(log_dir):
 def main(unused_argv):
     # Give a folder path as an argument with '--log_dir' to save
     # TensorBoard summaries. Default is a log folder in current directory.
-    
+
     current_path = os.path.dirname(os.path.realpath(sys.argv[0]))
 
     parser = argparse.ArgumentParser()
