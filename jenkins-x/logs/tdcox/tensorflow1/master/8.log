@@ -1,0 +1,273 @@
+Step: build-step-credential-initializer-wb97w:
+
+{"level":"warn","ts":1554127006.6259549,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1554127006.6264303,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-tdcox-tensorflow1-master-grkch:
+
+{"level":"warn","ts":1554127007.8045266,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1554127009.1856916,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/tdcox/tensorflow1\" @ \"v0.0.8\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-setup-jx-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-setup-step3:
+
+Already on 'master'
+Step: build-step-setup-step4:
+
+Step: build-step-setup-step5:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: build-step-build-step6:
+
+Collecting flake8
+  Downloading https://files.pythonhosted.org/packages/e9/76/b915bd28976068a9843bf836b789794aa4a8eb13338b23581005cd9177c0/flake8-3.7.7-py2.py3-none-any.whl (68kB)
+Collecting entrypoints<0.4.0,>=0.3.0 (from flake8)
+  Downloading https://files.pythonhosted.org/packages/ac/c6/44694103f8c221443ee6b0041f69e2740d89a25641e62fb4f2ee568f2f9c/entrypoints-0.3-py2.py3-none-any.whl
+Collecting pycodestyle<2.6.0,>=2.5.0 (from flake8)
+  Downloading https://files.pythonhosted.org/packages/0e/0c/04a353e104d2f324f8ee5f4b32012618c1c86dd79e52a433b64fceed511b/pycodestyle-2.5.0-py2.py3-none-any.whl (51kB)
+Collecting pyflakes<2.2.0,>=2.1.0 (from flake8)
+  Downloading https://files.pythonhosted.org/packages/84/f2/ed0ffb887f8138a8fe5a621b8c0bb9598bfb3989e029f6c6a85ee66628ee/pyflakes-2.1.1-py2.py3-none-any.whl (59kB)
+Collecting functools32; python_version < "3.2" (from flake8)
+  Downloading https://files.pythonhosted.org/packages/c5/60/6ac26ad05857c601308d8fb9e87fa36d0ebf889423f47c3502ef034365db/functools32-3.2.3-2.tar.gz
+Collecting configparser; python_version < "3.2" (from flake8)
+  Downloading https://files.pythonhosted.org/packages/ba/05/6c96328e92e625fc31445d24d75a2c92ef9ba34fc5b037fe69693c362a0d/configparser-3.7.4-py2.py3-none-any.whl
+Collecting typing; python_version < "3.5" (from flake8)
+  Downloading https://files.pythonhosted.org/packages/cc/3e/29f92b7aeda5b078c86d14f550bf85cff809042e3429ace7af6193c3bc9f/typing-3.6.6-py2-none-any.whl
+Collecting enum34; python_version < "3.4" (from flake8)
+  Downloading https://files.pythonhosted.org/packages/c5/db/e56e6b4bbac7c4a06de1c50de6fe1ef3810018ae11732a50f15f62c7d050/enum34-1.1.6-py2-none-any.whl
+Collecting mccabe<0.7.0,>=0.6.0 (from flake8)
+  Downloading https://files.pythonhosted.org/packages/87/89/479dc97e18549e21354893e4ee4ef36db1d237534982482c3681ee6e7b57/mccabe-0.6.1-py2.py3-none-any.whl
+Installing collected packages: configparser, entrypoints, pycodestyle, pyflakes, functools32, typing, enum34, mccabe, flake8
+  Running setup.py install for functools32: started
+    Running setup.py install for functools32: finished with status 'done'
+Successfully installed configparser-3.7.4 entrypoints-0.3 enum34-1.1.6 flake8-3.7.7 functools32-3.2.3.post2 mccabe-0.6.1 pycodestyle-2.5.0 pyflakes-2.1.1 typing-3.6.6
+You are using pip version 8.1.2, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Step: build-step-build-step7:
+
+Collecting pytest
+  Downloading https://files.pythonhosted.org/packages/7e/16/83b2a35c427b838df9836c9e7e4ae6dfbcbdea643db44652f693b1c57d70/pytest-4.4.0-py2.py3-none-any.whl (223kB)
+Collecting hypothesis
+  Downloading https://files.pythonhosted.org/packages/a9/a2/949fe1e51a89b1bc4946e92f41f1e8db90ed0b4c1115f373f04ca28f2fb3/hypothesis-4.14.2-py2-none-any.whl (254kB)
+Collecting funcsigs>=1.0; python_version < "3.0" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/69/cb/f5be453359271714c01b9bd06126eaf2e368f1fddfff30818754b5ac2328/funcsigs-1.0.2-py2.py3-none-any.whl
+Collecting atomicwrites>=1.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/52/90/6155aa926f43f2b2a22b01be7241be3bfd1ceaf7d0b3267213e8127d41f4/atomicwrites-1.3.0-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): setuptools in /usr/lib/python2.7/site-packages (from pytest)
+Collecting attrs>=17.4.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/23/96/d828354fa2dbdf216eaa7b7de0db692f12c234f7ef888cc14980ef40d1d2/attrs-19.1.0-py2.py3-none-any.whl
+Collecting pathlib2>=2.2.0; python_version < "3.6" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/2a/46/c696dcf1c7aad917b39b875acdc5451975e3a9b4890dca8329983201c97a/pathlib2-2.3.3-py2.py3-none-any.whl
+Collecting py>=1.5.0 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/76/bc/394ad449851729244a97857ee14d7cba61ddb268dce3db538ba2f2ba1f0f/py-1.8.0-py2.py3-none-any.whl (83kB)
+Requirement already satisfied (use --upgrade to upgrade): six>=1.10.0 in /usr/lib/python2.7/site-packages (from pytest)
+Collecting pluggy>=0.9 (from pytest)
+  Downloading https://files.pythonhosted.org/packages/84/e8/4ddac125b5a0e84ea6ffc93cfccf1e7ee1924e88f53c64e98227f0af2a5f/pluggy-0.9.0-py2.py3-none-any.whl
+Collecting more-itertools<6.0.0,>=4.0.0; python_version <= "2.7" (from pytest)
+  Downloading https://files.pythonhosted.org/packages/2f/9d/dcfe59e213093695f108508af1214cf9cd95cc5489e46877ec5cb56369e5/more_itertools-5.0.0-py2-none-any.whl (52kB)
+Collecting enum34; python_version == "2.7" (from hypothesis)
+  Using cached https://files.pythonhosted.org/packages/c5/db/e56e6b4bbac7c4a06de1c50de6fe1ef3810018ae11732a50f15f62c7d050/enum34-1.1.6-py2-none-any.whl
+Collecting scandir; python_version < "3.5" (from pathlib2>=2.2.0; python_version < "3.6"->pytest)
+  Downloading https://files.pythonhosted.org/packages/df/f5/9c052db7bd54d0cbf1bc0bb6554362bba1012d03e5888950a4f5c5dadc4e/scandir-1.10.0.tar.gz
+Installing collected packages: funcsigs, atomicwrites, attrs, scandir, pathlib2, py, pluggy, more-itertools, pytest, enum34, hypothesis
+  Running setup.py install for scandir: started
+    Running setup.py install for scandir: finished with status 'done'
+Successfully installed atomicwrites-1.3.0 attrs-19.1.0 enum34-1.1.6 funcsigs-1.0.2 hypothesis-4.14.2 more-itertools-5.0.0 pathlib2-2.3.3 pluggy-0.9.0 py-1.8.0 pytest-4.4.0 scandir-1.10.0
+You are using pip version 8.1.2, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.5, pytest-4.4.0, py-1.8.0, pluggy-0.9.0
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase('/workspace/source/.hypothesis/examples')
+rootdir: /workspace/source
+plugins: hypothesis-4.14.2
+collected 3 items
+
+test/test_helloworld_hypothesis.py .                                     [ 33%]
+test/test_helloworld_pytest.py .                                         [ 66%]
+test/test_helloworld_unittest.py .                                       [100%]
+
+=========================== 3 passed in 1.02 seconds ===========================
+Step: build-step-build-step8:
+
+[36mINFO[0m[0000] Downloading base image python:onbuild        
+ERROR: logging before flag.Parse: E0401 13:57:14.396306      12 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0401 13:57:14.402510      12 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/04/01 13:57:14 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:43780a8431c53f4afd734ad795e03127c0c607337a60639c5903a51a03535c22: no such file or directory 
+[36mINFO[0m[0001] Downloading base image python:onbuild        
+2019/04/01 13:57:15 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] Executing 3 build triggers                   
+[36mINFO[0m[0002] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0002] Checking for cached layer 10.59.251.141:5000/dee269b7822771b445c3695a56f582b756c6157494476ff4a64873314c8ba254... 
+2019/04/01 13:57:16 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] No cached layer found for cmd RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN pip install --no-cache-dir -r requirements.txt requires it. 
+[36mINFO[0m[0018] Taking snapshot of full filesystem...        
+[36mINFO[0m[0027] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0027] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0027] Taking snapshot of files...                  
+[36mINFO[0m[0027] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0027] cmd: /bin/sh                                 
+[36mINFO[0m[0027] args: [-c pip install --no-cache-dir -r requirements.txt] 
+Collecting tensorflow==1.13.1 (from -r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/77/63/a9fa76de8dffe7455304c4ed635be4aa9c0bacef6e0633d87d5f54530c5c/tensorflow-1.13.1-cp36-cp36m-manylinux1_x86_64.whl (92.5MB)
+Collecting sklearn (from -r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/1e/7a/dbb3be0ce9bd5c8b7e3d87328e79063f8b263b2b1bfa4774cb1147bfcd3f/sklearn-0.0.tar.gz
+Collecting tensorboard<1.14.0,>=1.13.0 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/0f/39/bdd75b08a6fba41f098b6cb091b9e8c7a80e1b4d679a581a0ccd17b10373/tensorboard-1.13.1-py3-none-any.whl (3.2MB)
+Collecting grpcio>=1.8.6 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/f4/dc/5503d89e530988eb7a1aed337dcb456ef8150f7c06132233bd9e41ec0215/grpcio-1.19.0-cp36-cp36m-manylinux1_x86_64.whl (10.8MB)
+Collecting keras-applications>=1.0.6 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/90/85/64c82949765cfb246bbdaf5aca2d55f400f792655927a017710a78445def/Keras_Applications-1.0.7-py2.py3-none-any.whl (51kB)
+Collecting absl-py>=0.1.6 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/da/3f/9b0355080b81b15ba6a9ffcf1f5ea39e307a2778b2f2dc8694724e8abd5b/absl-py-0.7.1.tar.gz (99kB)
+Collecting astor>=0.6.0 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/35/6b/11530768cac581a12952a2aad00e1526b89d242d0b9f59534ef6e6a1752f/astor-0.7.1-py2.py3-none-any.whl
+Collecting six>=1.10.0 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Requirement already satisfied: wheel>=0.26 in /usr/local/lib/python3.6/site-packages (from tensorflow==1.13.1->-r requirements.txt (line 2)) (0.31.1)
+Collecting tensorflow-estimator<1.14.0rc0,>=1.13.0 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/bb/48/13f49fc3fa0fdf916aa1419013bb8f2ad09674c275b4046d5ee669a46873/tensorflow_estimator-1.13.0-py2.py3-none-any.whl (367kB)
+Collecting protobuf>=3.6.1 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/5a/aa/a858df367b464f5e9452e1c538aa47754d467023850c00b000287750fa77/protobuf-3.7.1-cp36-cp36m-manylinux1_x86_64.whl (1.2MB)
+Collecting keras-preprocessing>=1.0.5 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/c0/bf/0315ef6a9fd3fc2346e85b0ff1f5f83ca17073f2c31ac719ab2e4da0d4a3/Keras_Preprocessing-1.0.9-py2.py3-none-any.whl (59kB)
+Collecting numpy>=1.13.3 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/35/d5/4f8410ac303e690144f0a0603c4b8fd3b986feb2749c435f7cdbb288f17e/numpy-1.16.2-cp36-cp36m-manylinux1_x86_64.whl (17.3MB)
+Collecting termcolor>=1.1.0 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
+Collecting gast>=0.2.0 (from tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/4e/35/11749bf99b2d4e3cceb4d55ca22590b0d7c2c62b9de38ac4a4a7f4687421/gast-0.2.2.tar.gz
+Collecting scikit-learn (from sklearn->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/5e/82/c0de5839d613b82bddd088599ac0bbfbbbcbd8ca470680658352d2c435bd/scikit_learn-0.20.3-cp36-cp36m-manylinux1_x86_64.whl (5.4MB)
+Collecting werkzeug>=0.11.15 (from tensorboard<1.14.0,>=1.13.0->tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/24/4d/2fc4e872fbaaf44cc3fd5a9cd42fda7e57c031f08e28c9f35689e8b43198/Werkzeug-0.15.1-py2.py3-none-any.whl (328kB)
+Collecting markdown>=2.6.8 (from tensorboard<1.14.0,>=1.13.0->tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/f5/e4/d8c18f2555add57ff21bf25af36d827145896a07607486cc79a2aea641af/Markdown-3.1-py2.py3-none-any.whl (87kB)
+Collecting h5py (from keras-applications>=1.0.6->tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/30/99/d7d4fbf2d02bb30fb76179911a250074b55b852d34e98dd452a9f394ac06/h5py-2.9.0-cp36-cp36m-manylinux1_x86_64.whl (2.8MB)
+Collecting mock>=2.0.0 (from tensorflow-estimator<1.14.0rc0,>=1.13.0->tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/e6/35/f187bdf23be87092bd0f1200d43d23076cee4d0dec109f195173fd3ebc79/mock-2.0.0-py2.py3-none-any.whl (56kB)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.6/site-packages (from protobuf>=3.6.1->tensorflow==1.13.1->-r requirements.txt (line 2)) (39.2.0)
+Collecting scipy>=0.13.3 (from scikit-learn->sklearn->-r requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/7f/5f/c48860704092933bf1c4c1574a8de1ffd16bf4fde8bab190d747598844b2/scipy-1.2.1-cp36-cp36m-manylinux1_x86_64.whl (24.8MB)
+Collecting pbr>=0.11 (from mock>=2.0.0->tensorflow-estimator<1.14.0rc0,>=1.13.0->tensorflow==1.13.1->-r requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/14/09/12fe9a14237a6b7e0ba3a8d6fcf254bf4b10ec56a0185f73d651145e9222/pbr-5.1.3-py2.py3-none-any.whl (107kB)
+Installing collected packages: numpy, six, absl-py, protobuf, werkzeug, markdown, grpcio, tensorboard, h5py, keras-applications, astor, pbr, mock, tensorflow-estimator, keras-preprocessing, termcolor, gast, tensorflow, scipy, scikit-learn, sklearn
+  Running setup.py install for absl-py: started
+    Running setup.py install for absl-py: finished with status 'done'
+  Running setup.py install for termcolor: started
+    Running setup.py install for termcolor: finished with status 'done'
+  Running setup.py install for gast: started
+    Running setup.py install for gast: finished with status 'done'
+  Running setup.py install for sklearn: started
+    Running setup.py install for sklearn: finished with status 'done'
+Successfully installed absl-py-0.7.1 astor-0.7.1 gast-0.2.2 grpcio-1.19.0 h5py-2.9.0 keras-applications-1.0.7 keras-preprocessing-1.0.9 markdown-3.1 mock-2.0.0 numpy-1.16.2 pbr-5.1.3 protobuf-3.7.1 scikit-learn-0.20.3 scipy-1.2.1 six-1.12.0 sklearn-0.0 tensorboard-1.13.1 tensorflow-1.13.1 tensorflow-estimator-1.13.0 termcolor-1.1.0 werkzeug-0.15.1
+You are using pip version 10.0.1, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0060] Taking snapshot of full filesystem...        
+[36mINFO[0m[0089] Pushing layer 10.59.251.141:5000/dee269b7822771b445c3695a56f582b756c6157494476ff4a64873314c8ba254 to cache now 
+ERROR: logging before flag.Parse: E0401 13:58:43.650008      12 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0401 13:58:43.653745      12 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0089] Using files from context: [/workspace/source] 
+[36mINFO[0m[0089] COPY . /usr/src/app                          
+[36mINFO[0m[0089] Taking snapshot of files...                  
+[36mINFO[0m[0089] Using files from context: [/workspace/source/requirements.txt] 
+[36mINFO[0m[0089] COPY requirements.txt .                      
+[36mINFO[0m[0089] Taking snapshot of files...                  
+[36mINFO[0m[0089] ENV PORT 8080                                
+[36mINFO[0m[0089] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0089] EXPOSE 8080                                  
+[36mINFO[0m[0089] cmd: EXPOSE                                  
+[36mINFO[0m[0089] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0089] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0089] RUN pip install tensorflow                   
+[36mINFO[0m[0089] cmd: /bin/sh                                 
+[36mINFO[0m[0089] args: [-c pip install tensorflow]            
+2019/04/01 13:58:43 pushed blob sha256:2ec7e9ad6b9281f3f54acd6751efb18f74e6ba3f66e4db93aba3dc2aac5478df
+Requirement already satisfied: tensorflow in /usr/local/lib/python3.6/site-packages (1.13.1)
+Requirement already satisfied: keras-preprocessing>=1.0.5 in /usr/local/lib/python3.6/site-packages (from tensorflow) (1.0.9)
+Requirement already satisfied: six>=1.10.0 in /usr/local/lib/python3.6/site-packages (from tensorflow) (1.12.0)
+Requirement already satisfied: protobuf>=3.6.1 in /usr/local/lib/python3.6/site-packages (from tensorflow) (3.7.1)
+Requirement already satisfied: keras-applications>=1.0.6 in /usr/local/lib/python3.6/site-packages (from tensorflow) (1.0.7)
+Requirement already satisfied: tensorboard<1.14.0,>=1.13.0 in /usr/local/lib/python3.6/site-packages (from tensorflow) (1.13.1)
+Requirement already satisfied: tensorflow-estimator<1.14.0rc0,>=1.13.0 in /usr/local/lib/python3.6/site-packages (from tensorflow) (1.13.0)
+Requirement already satisfied: grpcio>=1.8.6 in /usr/local/lib/python3.6/site-packages (from tensorflow) (1.19.0)
+Requirement already satisfied: astor>=0.6.0 in /usr/local/lib/python3.6/site-packages (from tensorflow) (0.7.1)
+Requirement already satisfied: numpy>=1.13.3 in /usr/local/lib/python3.6/site-packages (from tensorflow) (1.16.2)
+Requirement already satisfied: gast>=0.2.0 in /usr/local/lib/python3.6/site-packages (from tensorflow) (0.2.2)
+Requirement already satisfied: termcolor>=1.1.0 in /usr/local/lib/python3.6/site-packages (from tensorflow) (1.1.0)
+Requirement already satisfied: wheel>=0.26 in /usr/local/lib/python3.6/site-packages (from tensorflow) (0.31.1)
+Requirement already satisfied: absl-py>=0.1.6 in /usr/local/lib/python3.6/site-packages (from tensorflow) (0.7.1)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.6/site-packages (from protobuf>=3.6.1->tensorflow) (39.2.0)
+Requirement already satisfied: h5py in /usr/local/lib/python3.6/site-packages (from keras-applications>=1.0.6->tensorflow) (2.9.0)
+Requirement already satisfied: werkzeug>=0.11.15 in /usr/local/lib/python3.6/site-packages (from tensorboard<1.14.0,>=1.13.0->tensorflow) (0.15.1)
+Requirement already satisfied: markdown>=2.6.8 in /usr/local/lib/python3.6/site-packages (from tensorboard<1.14.0,>=1.13.0->tensorflow) (3.1)
+Requirement already satisfied: mock>=2.0.0 in /usr/local/lib/python3.6/site-packages (from tensorflow-estimator<1.14.0rc0,>=1.13.0->tensorflow) (2.0.0)
+Requirement already satisfied: pbr>=0.11 in /usr/local/lib/python3.6/site-packages (from mock>=2.0.0->tensorflow-estimator<1.14.0rc0,>=1.13.0->tensorflow) (5.1.3)
+You are using pip version 10.0.1, however version 19.0.3 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0090] Taking snapshot of full filesystem...        
+[36mINFO[0m[0102] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0102] Pushing layer 10.59.251.141:5000/036956ab7b84a76b58b8e7be5d233297fce367ea7fedf0d5a4564b7ff8262636 to cache now 
+[36mINFO[0m[0102] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0102] CMD ["app.py"]                               
+[36mINFO[0m[0102] No files changed in this command, skipping snapshotting. 
+2019/04/01 13:58:57 pushed blob sha256:793ff5076f26cc1f404c929adfb18ab02491d63ca51bf8b0b1c2e4259892c2f5
+2019/04/01 13:58:57 pushed blob sha256:98bdae2a9b28408a6e25e3ea6bc830aa20476d8e15457f8be03e93340a069c28
+2019/04/01 13:58:57 10.59.251.141:5000/036956ab7b84a76b58b8e7be5d233297fce367ea7fedf0d5a4564b7ff8262636:latest: digest: sha256:5b23442a3858a49437d5a569b590ce7198d98d74e071083dea3daa3b1c18661f size: 426
+2019/04/01 13:59:15 pushed blob sha256:4648d38dd9bdd2d22f8d82b4da37ef24fd69fac62c99c137852d81161945aa1f
+2019/04/01 13:59:15 10.59.251.141:5000/dee269b7822771b445c3695a56f582b756c6157494476ff4a64873314c8ba254:latest: digest: sha256:a3d41ad76cce5d16d183f09dfaf6a0b67e78ae0b888bb99122a631275371952b size: 430
+2019/04/01 13:59:15 existing blob: sha256:e2c0fb34dff3a1d32346b92e53fb88a14d1987b402a2348cb379c039687fabe2
+2019/04/01 13:59:15 existing blob: sha256:06854774e2f35e4763103a446112c67322913a6177bea69eb49663e0166e6d6d
+2019/04/01 13:59:15 existing blob: sha256:490280dbcfb772eb5731f059e38fcfacaeb75b4d005af7c249fd51926db2bd62
+2019/04/01 13:59:15 existing blob: sha256:ece825d3308bbf98f708d95475ccd880497a1e2979ff4ef2534d49049a18488f
+2019/04/01 13:59:15 existing blob: sha256:f0db43b9b8da254cebc77bf871006df01219e195b9853616b9f708f124a00f3a
+2019/04/01 13:59:15 existing blob: sha256:e10b68fb77e6e91453cd4c1b02e2d77aa23a857cd8eb250617129d074478e1a5
+2019/04/01 13:59:15 existing blob: sha256:2d21c767035c4593de8bf7ad9781aa83ba110871d1a50871192f4e3480e6f11d
+2019/04/01 13:59:15 existing blob: sha256:e96bc319bce0351d1157092352bc5f85f8800c745388e60e86d06dec99285b45
+2019/04/01 13:59:15 pushed blob sha256:733c40c4626499415fe83ff6b396035a77c62c8148beea3c7663cf86823cb064
+2019/04/01 13:59:15 pushed blob sha256:36205f9eae011e48e7015238d36e6f1e03f065b2d1b0b11027d16eb63e3137b5
+2019/04/01 13:59:15 pushed blob sha256:1294efecb77bb84b2ec3d87b2d7bcb725e97e88026e95079c8308c53281e6a72
+2019/04/01 13:59:15 pushed blob sha256:793ff5076f26cc1f404c929adfb18ab02491d63ca51bf8b0b1c2e4259892c2f5
+2019/04/01 13:59:15 existing blob: sha256:1c7fe136a31e13a1c879245672184ced3b9fc590989ba42a522a57b071a9c1aa
+2019/04/01 13:59:15 pushed blob sha256:9671d72561e8a369195620aaf07df69e9cc7e28aad3e4c6ce7b942ecb9a4a407
+2019/04/01 13:59:46 pushed blob sha256:4648d38dd9bdd2d22f8d82b4da37ef24fd69fac62c99c137852d81161945aa1f
+2019/04/01 13:59:46 10.59.251.141:5000/tdcox/tensorflow1:0.0.8: digest: sha256:c3cfb2936f988a30a43fc568477d99a5f5ee548b10f9c13b5179b619ce9d2ca0 size: 2550
+Step: build-step-build-step9:
+
+no CVE provider running in the current jx namespace so skip adding image to be analysed
+Step: build-step-promote-step10:
+
+Converted /workspace/source/charts/tensorflow1 to an unshallow repository
+Generating change log from git ref 6d6b58f6c23fa1ceb0942be8ba00a281259bc501 => 786850137bd1d74196a3a3411eaf8c01b949779f
+Failed to enrich commits with issues: User.jenkins.io "-0" is invalid: metadata.name: Invalid value: "-0": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+Failed to enrich commits with issues: User.jenkins.io "-0" is invalid: metadata.name: Invalid value: "-0": a DNS-1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+Finding issues in commit messages using git format
+No release found for tdcox/tensorflow1 and tag v0.0.8 so creating a new release
+Updated the release information at https://github.com/tdcox/tensorflow1/releases/tag/v0.0.8
+generated: /workspace/source/charts/tensorflow1/templates/release.yaml
+Created Release tensorflow1-0-0-8 resource in namespace jx
+Updating PipelineActivity tdcox-tensorflow1-master-8 with version 0.0.8
+Updated PipelineActivities tdcox-tensorflow1-master-8 with release notes URL: https://github.com/tdcox/tensorflow1/releases/tag/v0.0.8
+Step: build-step-promote-step11:
+
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
+Successfully added Helm repository jenkins-x.
+Adding missing Helm repo: releases http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository releases.
+No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file tensorflow1-0.0.8.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+Step: build-step-promote-step12:
+
+prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/jx/issues/2410
+Promoting app tensorflow1 version 0.0.8 to namespace jx-staging
+Created Pull Request: https://github.com/tdcox/environment-d29-staging/pull/14
+
+Failed to query the Pull Request last commit status for https://github.com/tdcox/environment-d29-staging/pull/14 ref 1420f3d414bac3f820f3570d4e055da83845eba2 Could not find a status for repository tdcox/environment-d29-staging with ref 1420f3d414bac3f820f3570d4e055da83845eba2
+Pull Request https://github.com/tdcox/environment-d29-staging/pull/14 is merged at sha 21d31b04e9ebef119e3b8c249968310982db5d3d
+Pull Request merged but we are not waiting for the update pipeline to complete!
