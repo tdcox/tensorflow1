@@ -32,8 +32,6 @@ from six.moves import urllib
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
 
-from tensorflow.contrib.tensorboard.plugins import projector
-
 data_index = 0
 
 
@@ -101,15 +99,19 @@ def word2vec_basic(log_dir):
     # count - map of words(strings) to count of occurrences
     # dictionary - map of words(strings) to their codes(integers)
     # reverse_dictionary - maps codes(integers) to words(strings)
-    data, count, unused_dictionary, reverse_dictionary = build_dataset(
+    global tr_embeddings
+    global tr_forward_dictionary
+    global tr_reverse_dictionary
+    data, count, tr_forward_dictionary, tr_reverse_dictionary = build_dataset(
         vocabulary, vocabulary_size)
     del vocabulary  # Hint to reduce memory.
     print('Most common words (+UNK)', count[:5])
-    print('Sample data', data[:10], [reverse_dictionary[i] for i in data[:10]])
+    print('Sample data', data[:10], [tr_reverse_dictionary[i] for i in data[:10]])
 
     # Step 3: Function to generate a training batch for the skip-gram model.
     def generate_batch(batch_size, num_skips, skip_window):
         global data_index
+
         assert batch_size % num_skips == 0
         assert num_skips <= 2 * skip_window
         batch = np.ndarray(shape=(batch_size), dtype=np.int32)
@@ -139,8 +141,8 @@ def word2vec_basic(log_dir):
 
     batch, labels = generate_batch(batch_size=8, num_skips=2, skip_window=1)
     for i in range(8):
-        print(batch[i], reverse_dictionary[batch[i]], '->', labels[i, 0],
-              reverse_dictionary[labels[i, 0]])
+        print(batch[i], tr_reverse_dictionary[batch[i]], '->', labels[i, 0],
+              tr_reverse_dictionary[labels[i, 0]])
 
     # Step 4: Build and train a skip-gram model.
 
@@ -274,33 +276,41 @@ def word2vec_basic(log_dir):
             if step % 10000 == 0:
                 sim = similarity.eval()
                 for i in xrange(valid_size):
-                    valid_word = reverse_dictionary[valid_examples[i]]
+                    valid_word = tr_reverse_dictionary[valid_examples[i]]
                     top_k = 8  # number of nearest neighbors
                     nearest = (-sim[i, :]).argsort()[1:top_k + 1]
                     log_str = 'Nearest to %s:' % valid_word
                     for k in xrange(top_k):
-                        close_word = reverse_dictionary[nearest[k]]
+                        close_word = tr_reverse_dictionary[nearest[k]]
                         log_str = '%s %s,' % (log_str, close_word)
                     print(log_str)
-#        final_embeddings = normalized_embeddings.eval()
+        tr_embeddings = normalized_embeddings.eval()
+
+        print('----------------------------------------------------------')
 
         # Write corresponding labels for the embeddings.
         with open(log_dir + '/metadata.tsv', 'w') as f:
             for i in xrange(vocabulary_size):
-                f.write(reverse_dictionary[i] + '\n')
+                f.write(tr_reverse_dictionary[i] + '\n')
 
         # Save the model for checkpoints.
         saver.save(session, os.path.join(log_dir, 'model.ckpt'))
 
-        # Create a configuration for visualizing embeddings with the labels in
-        # TensorBoard.
-        config = projector.ProjectorConfig()
-        embedding_conf = config.embeddings.add()
-        embedding_conf.tensor_name = embeddings.name
-        embedding_conf.metadata_path = os.path.join(log_dir, 'metadata.tsv')
-        projector.visualize_embeddings(writer, config)
-
     writer.close()
+
+
+def associate(word):
+    # Use the trained model to return the first association
+    global tr_embeddings
+    global tr_forward_dictionary
+    global tr_reverse_dictionary
+
+    try:
+        word_vec = tr_embeddings[tr_forward_dictionary[word]]
+        sim = np.dot(word_vec, -tr_embeddings.T).argsort()[0:8]
+        return tr_reverse_dictionary[sim[1]]
+    except KeyError:
+        return "unknown"
 
 
 # All functionality is run after tf.app.run() (b/122547914). This could be split
